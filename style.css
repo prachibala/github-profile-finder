@@ -134,3 +134,6 @@ td {
     text-align: right;
     font-weight: 400;
 }
+.hidden {
+    display: none;
+}
