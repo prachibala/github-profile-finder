@@ -137,3 +137,16 @@ td {
 .hidden {
     display: none;
 }
+.error {
+    font-size: 15px;
+    color: red;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background-color: #90e0ef;
+    width: 250px;
+    border-radius: 3px;
+    margin: 40px auto;
+    padding: 1.5px;
+    border: 1px solid #dff9ff;
+    box-shadow: 0 0 7px #58ffe3;
+}

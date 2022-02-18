@@ -1,5 +1,6 @@
 const form = document.querySelector(".form");
 const html = document.querySelector(".container");
+const error = document.querySelector(".error");
 // const btn = document.querySelector(".btn");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -17,6 +18,8 @@ form.addEventListener("submit", (e) => {
         })
         .then((data) => {
             // console.log(data);
+            error.innerHTML = "";
+            error.classList.add("hidden");
             html.classList.remove("hidden");
             html.innerHTML = `<img src="${data.avatar_url}" alt="prachi" />
             <p class="p2">${data.name}</p>
@@ -65,7 +68,13 @@ form.addEventListener("submit", (e) => {
             form.reset();
         })
         .catch((err) => {
-            console.log(err);
+            // console.log(err);
+            html.innerHTML = "";
+            html.classList.add("hidden");
+            error.classList.remove("hidden");
+            error.innerHTML = `
+            <p>Oops sorry! Cannot find the user !!</p>
+             `;
         });
 });
 // https://api.github.com/users/{user}
